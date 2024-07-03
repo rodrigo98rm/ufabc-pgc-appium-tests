@@ -26,8 +26,12 @@ describe('Login success', function () {
     const loginButton = await app.findElementById('login-button');
     await loginButton.click();
 
-    const headerTitle = await app.findElementByText('Notas');
+    const invalidLoginAlert = await app.findElementByText('Login Inválido');
+    assert.equal(await invalidLoginAlert.isDisplayed(), true);
 
-    assert.equal(await headerTitle.isDisplayed(), false);
+    const okButton = await app.findElementByText('OK');
+    await okButton.click();
+
+    assert.equal(await loginButton.isDisplayed(), true);
   });
 });

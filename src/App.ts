@@ -81,11 +81,12 @@ class App {
 
     if (this.platform === 'android') {
       return await this.driver.$(
-        `-android uiautomator:new UiSelector().text("${text}")`
+        // `-android uiautomator:new UiSelector().text("${text}")`
+        `//*[@text="${text}"]`
       );
     }
 
-    return await this.driver.$(`//*[@text="${text}"]`);
+    return await this.driver.$(`//*[@name="${text}"]`);
   }
 
   async findElement(selector: string) {
