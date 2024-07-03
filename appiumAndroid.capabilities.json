@@ -1,0 +1,9 @@
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2",
+  "appium:deviceName": "Android",
+  "appium:appPackage": "com.pgcapp",
+  "appium:appActivity": ".MainActivity",
+  "appium:locale": "US",
+  "appium:language": "en"
+}

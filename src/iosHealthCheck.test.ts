@@ -17,7 +17,7 @@ describe('Healthcheck iOS Appium connection', function () {
 
   before(async () => {
     app = new App();
-    await app.init(capabilities);
+    await app.init();
   });
 
   after(async () => {

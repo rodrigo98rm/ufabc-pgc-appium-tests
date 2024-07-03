@@ -15,11 +15,35 @@ const appiumOptions: RemoteOptions = {
   capabilities: {},
 };
 
-class App {
-  private driver: WebdriverIO.Browser | undefined;
+const androidCapabilities = {
+  platformName: 'Android',
+  'appium:automationName': 'UiAutomator2',
+  'appium:deviceName': 'Android',
+  'appium:appPackage': 'com.pgcapp',
+  'appium:appActivity': '.MainActivity',
+  'appium:locale': 'US',
+  'appium:language': 'en',
+};
 
-  async init(capabilities: any) {
-    appiumOptions.capabilities = capabilities;
+const iosCapabilities = {
+  platformName: 'iOS',
+  'appium:platformVersion': '17.2',
+  'appium:deviceName': 'iPhone 15',
+  'appium:automationName': 'XCUITest',
+  'appium:app': 'com.apple.Preferences',
+  'appium:locale': 'US',
+  'appium:language': 'en',
+};
+
+class App {
+  public driver: WebdriverIO.Browser | undefined;
+
+  async init() {
+    if (process.env.PLATFORM === 'android') {
+      appiumOptions.capabilities = androidCapabilities;
+    } else {
+      appiumOptions.capabilities = iosCapabilities;
+    }
 
     this.driver = await remote(appiumOptions);
   }
@@ -31,6 +55,26 @@ class App {
 
     await this.driver.pause(1000);
     await this.driver.deleteSession();
+  }
+
+  async findElementById(id: string) {
+    if (this.driver == null) {
+      throw new Error('Driver is not initialized');
+    }
+
+    return await this.driver.$(
+      `-android uiautomator:new UiSelector().resourceId("${id}")`
+    );
+  }
+
+  async findElementByText(text: string) {
+    if (this.driver == null) {
+      throw new Error('Driver is not initialized');
+    }
+
+    return await this.driver.$(
+      `-android uiautomator:new UiSelector().text("${text}")`
+    );
   }
 
   async findElement(selector: string) {
