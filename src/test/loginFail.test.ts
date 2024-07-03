@@ -1,5 +1,8 @@
 // https://medium.com/meero-engineering/kickstarting-mobile-testing-a-journey-with-appium-and-typescript-89b62d311069
+// https://www.testim.io/blog/mocha-for-typescript-testing/
+
 import { App } from '../App';
+import assert from 'assert';
 
 describe('Login success', function () {
   let app: App;
@@ -24,6 +27,7 @@ describe('Login success', function () {
     await loginButton.click();
 
     const headerTitle = await app.findElementByText('Notas');
-    await headerTitle.isDisplayed();
+
+    assert.equal(await headerTitle.isDisplayed(), false);
   });
 });

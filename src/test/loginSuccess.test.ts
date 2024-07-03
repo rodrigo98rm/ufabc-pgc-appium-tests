@@ -1,5 +1,6 @@
 // https://medium.com/meero-engineering/kickstarting-mobile-testing-a-journey-with-appium-and-typescript-89b62d311069
 import { App } from '../App';
+import assert from 'assert';
 
 describe('Login success', function () {
   let app: App;
@@ -23,7 +24,10 @@ describe('Login success', function () {
     const loginButton = await app.findElementById('login-button');
     await loginButton.click();
 
-    const headerTitle = await app.findElementByText('Notas');
-    await headerTitle.isDisplayed();
+    const headerTitle = await app.findElementByText('Nenhuma nota cadastrada');
+
+    await app.pause(1000);
+
+    assert.equal(await headerTitle.isDisplayed(), true);
   });
 });

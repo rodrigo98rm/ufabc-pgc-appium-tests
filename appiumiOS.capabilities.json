@@ -1,0 +1,9 @@
+{
+  "platformName": "iOS",
+  "appium:platformVersion": "17.2",
+  "appium:deviceName": "iPhone 15",
+  "appium:automationName": "XCUITest",
+  "appium:app": "com.pgcapp",
+  "appium:locale": "US",
+  "appium:language": "en"
+}

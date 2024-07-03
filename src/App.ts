@@ -30,16 +30,19 @@ const iosCapabilities = {
   'appium:platformVersion': '17.2',
   'appium:deviceName': 'iPhone 15',
   'appium:automationName': 'XCUITest',
-  'appium:app': 'com.apple.Preferences',
+  'appium:app': 'com.pgcapp',
   'appium:locale': 'US',
   'appium:language': 'en',
 };
 
 class App {
   public driver: WebdriverIO.Browser | undefined;
+  private platform: 'android' | 'ios' | undefined;
 
   async init() {
-    if (process.env.PLATFORM === 'android') {
+    this.platform = process.env.PLATFORM as 'android' | 'ios';
+
+    if (this.platform === 'android') {
       appiumOptions.capabilities = androidCapabilities;
     } else {
       appiumOptions.capabilities = iosCapabilities;
@@ -62,9 +65,13 @@ class App {
       throw new Error('Driver is not initialized');
     }
 
-    return await this.driver.$(
-      `-android uiautomator:new UiSelector().resourceId("${id}")`
-    );
+    if (this.platform === 'android') {
+      return await this.driver.$(
+        `-android uiautomator:new UiSelector().resourceId("${id}")`
+      );
+    }
+
+    return await this.driver.$(`accessibility id:${id}`);
   }
 
   async findElementByText(text: string) {
@@ -72,9 +79,13 @@ class App {
       throw new Error('Driver is not initialized');
     }
 
-    return await this.driver.$(
-      `-android uiautomator:new UiSelector().text("${text}")`
-    );
+    if (this.platform === 'android') {
+      return await this.driver.$(
+        `-android uiautomator:new UiSelector().text("${text}")`
+      );
+    }
+
+    return await this.driver.$(`//*[@text="${text}"]`);
   }
 
   async findElement(selector: string) {
@@ -83,6 +94,14 @@ class App {
     }
 
     return await this.driver.$(selector);
+  }
+
+  async pause(ms: number) {
+    if (this.driver == null) {
+      throw new Error('Driver is not initialized');
+    }
+
+    await this.driver.pause(ms);
   }
 }
 
