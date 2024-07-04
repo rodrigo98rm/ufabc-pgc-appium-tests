@@ -2,7 +2,7 @@ import { App } from '../../App';
 import { createNote } from '../baseFlows/createNote.base';
 import assert from 'assert';
 
-describe('Create note', function () {
+describe('Delete note', function () {
   let app: App;
 
   before(async () => {

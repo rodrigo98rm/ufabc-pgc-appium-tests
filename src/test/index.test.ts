@@ -4,3 +4,4 @@ import './list/emptyState.test';
 import './notes/createNote.test';
 import './notes/createNoteValidation.test';
 import './notes/deleteNote.test';
+import './notes/editNote.test';
