@@ -1,10 +1,10 @@
 // https://medium.com/meero-engineering/kickstarting-mobile-testing-a-journey-with-appium-and-typescript-89b62d311069
 // https://www.testim.io/blog/mocha-for-typescript-testing/
 
-import { App } from '../App';
+import { App } from '../../App';
 import assert from 'assert';
 
-describe('Login success', function () {
+describe('Login fail', function () {
   let app: App;
 
   before(async () => {

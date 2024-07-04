@@ -23,6 +23,7 @@ const androidCapabilities = {
   'appium:appActivity': '.MainActivity',
   'appium:locale': 'US',
   'appium:language': 'en',
+  'appium:noReset': true,
 };
 
 const iosCapabilities = {
@@ -33,6 +34,7 @@ const iosCapabilities = {
   'appium:app': 'com.pgcapp',
   'appium:locale': 'US',
   'appium:language': 'en',
+  'appium:noReset': true,
 };
 
 class App {
@@ -86,7 +88,7 @@ class App {
       );
     }
 
-    return await this.driver.$(`//*[@name="${text}"]`);
+    return await this.driver.$(`//*[@label="${text}"]`);
   }
 
   async findElement(selector: string) {
