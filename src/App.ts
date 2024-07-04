@@ -51,6 +51,7 @@ class App {
     }
 
     this.driver = await remote(appiumOptions);
+    // TODO: Relaunch app on the beginning of each test
   }
 
   async quit() {
@@ -58,8 +59,9 @@ class App {
       return;
     }
 
-    await this.driver.pause(1000);
-    await this.driver.deleteSession();
+    // await this.driver.pause(1000);
+    // await this.driver.deleteSession();
+    await this.driver.terminateApp('com.pgcapp');
   }
 
   async findElementById(id: string) {
