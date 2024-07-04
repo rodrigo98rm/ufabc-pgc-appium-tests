@@ -1,0 +1,949 @@
+➜  
+rodrigo98rm in appium-tests on  main [!?] 
+➜  env PLATFORM=ios npx mocha -r ts-node/register "./src/test/index.test.ts"    
+
+
+  Login fail
+2024-07-04T11:09:07.345Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:09:07.347Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:09:07.449Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:09:07.449Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:09:09.055Z INFO webdriver: COMMAND findElement("accessibility id", "email-input")
+2024-07-04T11:09:09.055Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element
+2024-07-04T11:09:09.056Z INFO webdriver: DATA { using: 'accessibility id', value: 'email-input' }
+2024-07-04T11:09:09.455Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1B000000-0000-0000-C91B-010000000000',
+  ELEMENT: '1B000000-0000-0000-C91B-010000000000'
+}
+2024-07-04T11:09:09.459Z INFO webdriver: COMMAND elementClear("1B000000-0000-0000-C91B-010000000000")
+2024-07-04T11:09:09.459Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/1B000000-0000-0000-C91B-010000000000/clear
+2024-07-04T11:09:10.642Z INFO webdriver: RESULT null
+2024-07-04T11:09:10.643Z INFO webdriver: COMMAND elementSendKeys("1B000000-0000-0000-C91B-010000000000", "rodrigo@teste.com")
+2024-07-04T11:09:10.643Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/1B000000-0000-0000-C91B-010000000000/value
+2024-07-04T11:09:10.643Z INFO webdriver: DATA { text: 'rodrigo@teste.com' }
+2024-07-04T11:09:11.194Z INFO webdriver: RESULT null
+2024-07-04T11:09:11.195Z INFO webdriver: COMMAND findElement("accessibility id", "password-input")
+2024-07-04T11:09:11.195Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element
+2024-07-04T11:09:11.195Z INFO webdriver: DATA { using: 'accessibility id', value: 'password-input' }
+2024-07-04T11:09:11.331Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-C91B-010000000000',
+  ELEMENT: '1C000000-0000-0000-C91B-010000000000'
+}
+2024-07-04T11:09:11.336Z INFO webdriver: COMMAND elementClear("1C000000-0000-0000-C91B-010000000000")
+2024-07-04T11:09:11.336Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/1C000000-0000-0000-C91B-010000000000/clear
+2024-07-04T11:09:12.148Z INFO webdriver: RESULT null
+2024-07-04T11:09:12.148Z INFO webdriver: COMMAND elementSendKeys("1C000000-0000-0000-C91B-010000000000", "12345")
+2024-07-04T11:09:12.148Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/1C000000-0000-0000-C91B-010000000000/value
+2024-07-04T11:09:12.148Z INFO webdriver: DATA { text: '12345' }
+2024-07-04T11:09:12.488Z INFO webdriver: RESULT null
+2024-07-04T11:09:12.488Z INFO webdriver: COMMAND findElement("accessibility id", "login-button")
+2024-07-04T11:09:12.488Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element
+2024-07-04T11:09:12.488Z INFO webdriver: DATA { using: 'accessibility id', value: 'login-button' }
+2024-07-04T11:09:12.574Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1D000000-0000-0000-C91B-010000000000',
+  ELEMENT: '1D000000-0000-0000-C91B-010000000000'
+}
+2024-07-04T11:09:12.577Z INFO webdriver: COMMAND elementClick("1D000000-0000-0000-C91B-010000000000")
+2024-07-04T11:09:12.577Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/1D000000-0000-0000-C91B-010000000000/click
+2024-07-04T11:09:13.081Z INFO webdriver: RESULT null
+2024-07-04T11:09:13.081Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Login Inválido"]")
+2024-07-04T11:09:13.081Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element
+2024-07-04T11:09:13.081Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Login Inválido"]' }
+2024-07-04T11:09:13.247Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '6B000000-0000-0000-C91B-010000000000',
+  ELEMENT: '6B000000-0000-0000-C91B-010000000000'
+}
+2024-07-04T11:09:13.249Z INFO webdriver: COMMAND isElementDisplayed("6B000000-0000-0000-C91B-010000000000")
+2024-07-04T11:09:13.249Z INFO webdriver: [GET] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/6B000000-0000-0000-C91B-010000000000/displayed
+2024-07-04T11:09:13.272Z INFO webdriver: RESULT true
+2024-07-04T11:09:13.273Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="OK"]")
+2024-07-04T11:09:13.273Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element
+2024-07-04T11:09:13.273Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="OK"]' }
+2024-07-04T11:09:13.409Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '83000000-0000-0000-C91B-010000000000',
+  ELEMENT: '83000000-0000-0000-C91B-010000000000'
+}
+2024-07-04T11:09:13.411Z INFO webdriver: COMMAND elementClick("83000000-0000-0000-C91B-010000000000")
+2024-07-04T11:09:13.411Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/83000000-0000-0000-C91B-010000000000/click
+2024-07-04T11:09:14.164Z INFO webdriver: RESULT null
+2024-07-04T11:09:14.164Z INFO webdriver: COMMAND isElementDisplayed("1D000000-0000-0000-C91B-010000000000")
+2024-07-04T11:09:14.164Z INFO webdriver: [GET] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/element/1D000000-0000-0000-C91B-010000000000/displayed
+2024-07-04T11:09:14.207Z INFO webdriver: RESULT true
+    ✔ Login fails (5153ms)
+2024-07-04T11:09:14.208Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:09:14.208Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7b0a84ba-0364-4cb2-97e6-dac1a878cb4f/appium/device/terminate_app
+2024-07-04T11:09:14.208Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:09:15.257Z INFO webdriver: RESULT true
+
+  Login success
+2024-07-04T11:09:15.259Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:09:15.259Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:09:15.260Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:09:15.260Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:09:19.393Z INFO webdriver: COMMAND findElement("accessibility id", "email-input")
+2024-07-04T11:09:19.393Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element
+2024-07-04T11:09:19.393Z INFO webdriver: DATA { using: 'accessibility id', value: 'email-input' }
+2024-07-04T11:09:19.486Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-A223-010000000000',
+  ELEMENT: '1A000000-0000-0000-A223-010000000000'
+}
+2024-07-04T11:09:19.489Z INFO webdriver: COMMAND elementClear("1A000000-0000-0000-A223-010000000000")
+2024-07-04T11:09:19.489Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element/1A000000-0000-0000-A223-010000000000/clear
+2024-07-04T11:09:20.225Z INFO webdriver: RESULT null
+2024-07-04T11:09:20.225Z INFO webdriver: COMMAND elementSendKeys("1A000000-0000-0000-A223-010000000000", "rodrigo@teste.com")
+2024-07-04T11:09:20.225Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element/1A000000-0000-0000-A223-010000000000/value
+2024-07-04T11:09:20.225Z INFO webdriver: DATA { text: 'rodrigo@teste.com' }
+2024-07-04T11:09:20.779Z INFO webdriver: RESULT null
+2024-07-04T11:09:20.780Z INFO webdriver: COMMAND findElement("accessibility id", "password-input")
+2024-07-04T11:09:20.780Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element
+2024-07-04T11:09:20.780Z INFO webdriver: DATA { using: 'accessibility id', value: 'password-input' }
+2024-07-04T11:09:20.876Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1B000000-0000-0000-A223-010000000000',
+  ELEMENT: '1B000000-0000-0000-A223-010000000000'
+}
+2024-07-04T11:09:20.879Z INFO webdriver: COMMAND elementClear("1B000000-0000-0000-A223-010000000000")
+2024-07-04T11:09:20.879Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element/1B000000-0000-0000-A223-010000000000/clear
+2024-07-04T11:09:22.256Z INFO webdriver: RESULT null
+2024-07-04T11:09:22.257Z INFO webdriver: COMMAND elementSendKeys("1B000000-0000-0000-A223-010000000000", "123456")
+2024-07-04T11:09:22.257Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element/1B000000-0000-0000-A223-010000000000/value
+2024-07-04T11:09:22.257Z INFO webdriver: DATA { text: '123456' }
+2024-07-04T11:09:22.607Z INFO webdriver: RESULT null
+2024-07-04T11:09:22.607Z INFO webdriver: COMMAND findElement("accessibility id", "login-button")
+2024-07-04T11:09:22.608Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element
+2024-07-04T11:09:22.608Z INFO webdriver: DATA { using: 'accessibility id', value: 'login-button' }
+2024-07-04T11:09:22.696Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-A223-010000000000',
+  ELEMENT: '1C000000-0000-0000-A223-010000000000'
+}
+2024-07-04T11:09:22.699Z INFO webdriver: COMMAND elementClick("1C000000-0000-0000-A223-010000000000")
+2024-07-04T11:09:22.699Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element/1C000000-0000-0000-A223-010000000000/click
+2024-07-04T11:09:23.613Z INFO webdriver: RESULT null
+2024-07-04T11:09:23.613Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Notas"]")
+2024-07-04T11:09:23.613Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element
+2024-07-04T11:09:23.613Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Notas"]' }
+2024-07-04T11:09:23.715Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '64000000-0000-0000-A223-010000000000',
+  ELEMENT: '64000000-0000-0000-A223-010000000000'
+}
+2024-07-04T11:09:23.716Z INFO webdriver: COMMAND isElementDisplayed("64000000-0000-0000-A223-010000000000")
+2024-07-04T11:09:23.716Z INFO webdriver: [GET] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/element/64000000-0000-0000-A223-010000000000/displayed
+2024-07-04T11:09:23.738Z INFO webdriver: RESULT true
+    ✔ Login succeeds (4347ms)
+2024-07-04T11:09:23.739Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:09:23.739Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c93c8870-aecd-49da-a801-f6f48d6f8ccb/appium/device/terminate_app
+2024-07-04T11:09:23.739Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:09:24.783Z INFO webdriver: RESULT true
+
+  Empty list state
+2024-07-04T11:09:24.786Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:09:24.786Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:09:24.786Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:09:24.786Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:09:28.252Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nenhuma nota cadastrada"]")
+2024-07-04T11:09:28.253Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c0a9ccd4-9945-45ff-be61-1fc196d2de01/element
+2024-07-04T11:09:28.253Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nenhuma nota cadastrada"]' }
+2024-07-04T11:09:28.368Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-3B24-010000000000',
+  ELEMENT: '1A000000-0000-0000-3B24-010000000000'
+}
+2024-07-04T11:09:28.370Z INFO webdriver: COMMAND isElementDisplayed("1A000000-0000-0000-3B24-010000000000")
+2024-07-04T11:09:28.371Z INFO webdriver: [GET] http://127.0.0.1:4723/session/c0a9ccd4-9945-45ff-be61-1fc196d2de01/element/1A000000-0000-0000-3B24-010000000000/displayed
+2024-07-04T11:09:28.395Z INFO webdriver: RESULT true
+    ✔ Should show some basic information while the list is empty (143ms)
+2024-07-04T11:09:28.396Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:09:28.396Z INFO webdriver: [POST] http://127.0.0.1:4723/session/c0a9ccd4-9945-45ff-be61-1fc196d2de01/appium/device/terminate_app
+2024-07-04T11:09:28.396Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:09:29.442Z INFO webdriver: RESULT true
+
+  Create note
+2024-07-04T11:09:29.445Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:09:29.445Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:09:29.446Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:09:29.446Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:09:32.927Z INFO webdriver: COMMAND findElement("accessibility id", "new-note-button")
+2024-07-04T11:09:32.927Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element
+2024-07-04T11:09:32.927Z INFO webdriver: DATA { using: 'accessibility id', value: 'new-note-button' }
+2024-07-04T11:09:32.994Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-CE24-010000000000',
+  ELEMENT: '1C000000-0000-0000-CE24-010000000000'
+}
+2024-07-04T11:09:32.996Z INFO webdriver: COMMAND elementClick("1C000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:32.996Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/1C000000-0000-0000-CE24-010000000000/click
+2024-07-04T11:09:33.845Z INFO webdriver: RESULT null
+2024-07-04T11:09:33.845Z INFO webdriver: COMMAND findElement("accessibility id", "title-input")
+2024-07-04T11:09:33.845Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element
+2024-07-04T11:09:33.845Z INFO webdriver: DATA { using: 'accessibility id', value: 'title-input' }
+2024-07-04T11:09:33.905Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '27000000-0000-0000-CE24-010000000000',
+  ELEMENT: '27000000-0000-0000-CE24-010000000000'
+}
+2024-07-04T11:09:33.908Z INFO webdriver: COMMAND elementClear("27000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:33.908Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/27000000-0000-0000-CE24-010000000000/clear
+2024-07-04T11:09:34.745Z INFO webdriver: RESULT null
+2024-07-04T11:09:34.745Z INFO webdriver: COMMAND elementSendKeys("27000000-0000-0000-CE24-010000000000", "Nota teste 1")
+2024-07-04T11:09:34.746Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/27000000-0000-0000-CE24-010000000000/value
+2024-07-04T11:09:34.746Z INFO webdriver: DATA { text: 'Nota teste 1' }
+2024-07-04T11:09:35.198Z INFO webdriver: RESULT null
+2024-07-04T11:09:35.198Z INFO webdriver: COMMAND findElement("accessibility id", "description-input")
+2024-07-04T11:09:35.198Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element
+2024-07-04T11:09:35.198Z INFO webdriver: DATA { using: 'accessibility id', value: 'description-input' }
+2024-07-04T11:09:35.278Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '2A000000-0000-0000-CE24-010000000000',
+  ELEMENT: '2A000000-0000-0000-CE24-010000000000'
+}
+2024-07-04T11:09:35.281Z INFO webdriver: COMMAND elementClear("2A000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:35.281Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/2A000000-0000-0000-CE24-010000000000/clear
+2024-07-04T11:09:35.319Z INFO webdriver: RESULT null
+2024-07-04T11:09:35.319Z INFO webdriver: COMMAND elementSendKeys("2A000000-0000-0000-CE24-010000000000", "Descrição teste 1")
+2024-07-04T11:09:35.319Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/2A000000-0000-0000-CE24-010000000000/value
+2024-07-04T11:09:35.319Z INFO webdriver: DATA { text: 'Descrição teste 1' }
+2024-07-04T11:09:36.256Z INFO webdriver: RESULT null
+2024-07-04T11:09:36.257Z INFO webdriver: COMMAND findElement("accessibility id", "save-note-button")
+2024-07-04T11:09:36.257Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element
+2024-07-04T11:09:36.257Z INFO webdriver: DATA { using: 'accessibility id', value: 'save-note-button' }
+2024-07-04T11:09:36.364Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '2B000000-0000-0000-CE24-010000000000',
+  ELEMENT: '2B000000-0000-0000-CE24-010000000000'
+}
+2024-07-04T11:09:36.367Z INFO webdriver: COMMAND elementClick("2B000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:36.367Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/2B000000-0000-0000-CE24-010000000000/click
+2024-07-04T11:09:37.130Z INFO webdriver: RESULT null
+2024-07-04T11:09:37.131Z INFO webdriver: COMMAND isElementDisplayed("1C000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:37.131Z INFO webdriver: [GET] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/1C000000-0000-0000-CE24-010000000000/displayed
+2024-07-04T11:09:37.183Z INFO webdriver: RESULT true
+2024-07-04T11:09:37.183Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota teste 1"]")
+2024-07-04T11:09:37.184Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element
+2024-07-04T11:09:37.184Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota teste 1"]' }
+2024-07-04T11:09:37.298Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'B2000000-0000-0000-CE24-010000000000',
+  ELEMENT: 'B2000000-0000-0000-CE24-010000000000'
+}
+2024-07-04T11:09:37.300Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Descrição teste 1"]")
+2024-07-04T11:09:37.300Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element
+2024-07-04T11:09:37.300Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Descrição teste 1"]' }
+2024-07-04T11:09:37.407Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'B3000000-0000-0000-CE24-010000000000',
+  ELEMENT: 'B3000000-0000-0000-CE24-010000000000'
+}
+2024-07-04T11:09:37.409Z INFO webdriver: COMMAND isElementDisplayed("B2000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:37.410Z INFO webdriver: [GET] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/B2000000-0000-0000-CE24-010000000000/displayed
+2024-07-04T11:09:37.430Z INFO webdriver: RESULT true
+2024-07-04T11:09:37.430Z INFO webdriver: COMMAND isElementDisplayed("B3000000-0000-0000-CE24-010000000000")
+2024-07-04T11:09:37.430Z INFO webdriver: [GET] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/element/B3000000-0000-0000-CE24-010000000000/displayed
+2024-07-04T11:09:37.450Z INFO webdriver: RESULT true
+    ✔ Should create a note (4524ms)
+2024-07-04T11:09:37.451Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:09:37.451Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7117f0a7-ac9f-479b-8e52-f99fda371b01/appium/device/terminate_app
+2024-07-04T11:09:37.451Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:09:38.500Z INFO webdriver: RESULT true
+
+  Create note validation
+2024-07-04T11:09:38.502Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:09:38.502Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:09:38.502Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:09:38.502Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:09:42.308Z INFO webdriver: COMMAND findElement("accessibility id", "new-note-button")
+2024-07-04T11:09:42.309Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:42.309Z INFO webdriver: DATA { using: 'accessibility id', value: 'new-note-button' }
+2024-07-04T11:09:42.421Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-6625-010000000000',
+  ELEMENT: '1A000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:42.426Z INFO webdriver: COMMAND elementClick("1A000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:42.426Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/1A000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:43.148Z INFO webdriver: RESULT null
+2024-07-04T11:09:43.149Z INFO webdriver: COMMAND findElement("accessibility id", "save-note-button")
+2024-07-04T11:09:43.149Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:43.149Z INFO webdriver: DATA { using: 'accessibility id', value: 'save-note-button' }
+2024-07-04T11:09:43.223Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '36000000-0000-0000-6625-010000000000',
+  ELEMENT: '36000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:43.225Z INFO webdriver: COMMAND elementClick("36000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:43.225Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/36000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:43.848Z INFO webdriver: RESULT null
+2024-07-04T11:09:43.848Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Preencha o título"]")
+2024-07-04T11:09:43.848Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:43.848Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Preencha o título"]' }
+2024-07-04T11:09:44.018Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '54000000-0000-0000-6625-010000000000',
+  ELEMENT: '54000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:44.019Z INFO webdriver: COMMAND isElementDisplayed("54000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:44.019Z INFO webdriver: [GET] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/54000000-0000-0000-6625-010000000000/displayed
+2024-07-04T11:09:44.042Z INFO webdriver: RESULT true
+2024-07-04T11:09:44.042Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="OK"]")
+2024-07-04T11:09:44.043Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:44.043Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="OK"]' }
+2024-07-04T11:09:44.194Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '58000000-0000-0000-6625-010000000000',
+  ELEMENT: '58000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:44.196Z INFO webdriver: COMMAND elementClick("58000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:44.196Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/58000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:44.745Z INFO webdriver: RESULT null
+2024-07-04T11:09:44.745Z INFO webdriver: COMMAND findElement("accessibility id", "title-input")
+2024-07-04T11:09:44.745Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:44.745Z INFO webdriver: DATA { using: 'accessibility id', value: 'title-input' }
+2024-07-04T11:09:44.807Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '32000000-0000-0000-6625-010000000000',
+  ELEMENT: '32000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:44.810Z INFO webdriver: COMMAND elementClear("32000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:44.810Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/32000000-0000-0000-6625-010000000000/clear
+2024-07-04T11:09:45.562Z INFO webdriver: RESULT null
+2024-07-04T11:09:45.563Z INFO webdriver: COMMAND elementSendKeys("32000000-0000-0000-6625-010000000000", "Nota teste 1")
+2024-07-04T11:09:45.563Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/32000000-0000-0000-6625-010000000000/value
+2024-07-04T11:09:45.563Z INFO webdriver: DATA { text: 'Nota teste 1' }
+2024-07-04T11:09:46.015Z INFO webdriver: RESULT null
+2024-07-04T11:09:46.015Z INFO webdriver: COMMAND elementClick("36000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:46.015Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/36000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:46.651Z INFO webdriver: RESULT null
+2024-07-04T11:09:46.651Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Preencha a descrição"]")
+2024-07-04T11:09:46.651Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:46.652Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Preencha a descrição"]' }
+2024-07-04T11:09:46.839Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'E6000000-0000-0000-6625-010000000000',
+  ELEMENT: 'E6000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:46.840Z INFO webdriver: COMMAND isElementDisplayed("E6000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:46.840Z INFO webdriver: [GET] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/E6000000-0000-0000-6625-010000000000/displayed
+2024-07-04T11:09:46.863Z INFO webdriver: RESULT true
+2024-07-04T11:09:46.863Z INFO webdriver: COMMAND elementClick("58000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:46.863Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/58000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:46.925Z WARN webdriver: Request encountered a stale element - terminating request
+2024-07-04T11:09:46.925Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="OK"]")
+2024-07-04T11:09:46.925Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:46.925Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="OK"]' }
+2024-07-04T11:09:47.077Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'EA000000-0000-0000-6625-010000000000',
+  ELEMENT: 'EA000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:47.078Z INFO webdriver: COMMAND elementClick("58000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:47.078Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/58000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:47.098Z WARN webdriver: Request encountered a stale element - terminating request
+2024-07-04T11:09:47.098Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="OK"]")
+2024-07-04T11:09:47.098Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:47.098Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="OK"]' }
+2024-07-04T11:09:47.255Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'EA000000-0000-0000-6625-010000000000',
+  ELEMENT: 'EA000000-0000-0000-6625-010000000000'
+}
+2024-07-04T11:09:47.258Z INFO webdriver: COMMAND elementClick("EA000000-0000-0000-6625-010000000000")
+2024-07-04T11:09:47.258Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element/EA000000-0000-0000-6625-010000000000/click
+2024-07-04T11:09:47.858Z INFO webdriver: RESULT null
+2024-07-04T11:09:47.858Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Erro"]")
+2024-07-04T11:09:47.859Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:47.859Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Erro"]' }
+2024-07-04T11:09:48.046Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+2024-07-04T11:09:48.048Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Erro"]")
+2024-07-04T11:09:48.048Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/element
+2024-07-04T11:09:48.048Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Erro"]' }
+2024-07-04T11:09:48.201Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+    ✔ Should display the correct validation errors (5894ms)
+2024-07-04T11:09:48.203Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:09:48.203Z INFO webdriver: [POST] http://127.0.0.1:4723/session/577556ae-97e8-4cde-b7b5-f3ad9032cd40/appium/device/terminate_app
+2024-07-04T11:09:48.203Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:09:49.260Z INFO webdriver: RESULT true
+
+  Delete note
+2024-07-04T11:09:49.261Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:09:49.261Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:09:49.262Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:09:49.262Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:09:53.106Z INFO webdriver: COMMAND findElement("accessibility id", "new-note-button")
+2024-07-04T11:09:53.106Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:53.106Z INFO webdriver: DATA { using: 'accessibility id', value: 'new-note-button' }
+2024-07-04T11:09:53.203Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-0026-010000000000',
+  ELEMENT: '1A000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:53.205Z INFO webdriver: COMMAND elementClick("1A000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:53.205Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/1A000000-0000-0000-0026-010000000000/click
+2024-07-04T11:09:53.927Z INFO webdriver: RESULT null
+2024-07-04T11:09:53.928Z INFO webdriver: COMMAND findElement("accessibility id", "title-input")
+2024-07-04T11:09:53.928Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:53.928Z INFO webdriver: DATA { using: 'accessibility id', value: 'title-input' }
+2024-07-04T11:09:53.979Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '32000000-0000-0000-0026-010000000000',
+  ELEMENT: '32000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:53.981Z INFO webdriver: COMMAND elementClear("32000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:53.981Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/32000000-0000-0000-0026-010000000000/clear
+2024-07-04T11:09:54.733Z INFO webdriver: RESULT null
+2024-07-04T11:09:54.733Z INFO webdriver: COMMAND elementSendKeys("32000000-0000-0000-0026-010000000000", "Nota a ser apagada")
+2024-07-04T11:09:54.734Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/32000000-0000-0000-0026-010000000000/value
+2024-07-04T11:09:54.734Z INFO webdriver: DATA { text: 'Nota a ser apagada' }
+2024-07-04T11:09:55.291Z INFO webdriver: RESULT null
+2024-07-04T11:09:55.292Z INFO webdriver: COMMAND findElement("accessibility id", "description-input")
+2024-07-04T11:09:55.292Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:55.292Z INFO webdriver: DATA { using: 'accessibility id', value: 'description-input' }
+2024-07-04T11:09:55.370Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '35000000-0000-0000-0026-010000000000',
+  ELEMENT: '35000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:55.373Z INFO webdriver: COMMAND elementClear("35000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:55.373Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/35000000-0000-0000-0026-010000000000/clear
+2024-07-04T11:09:55.408Z INFO webdriver: RESULT null
+2024-07-04T11:09:55.408Z INFO webdriver: COMMAND elementSendKeys("35000000-0000-0000-0026-010000000000", "Descrição da nota a ser apagada")
+2024-07-04T11:09:55.408Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/35000000-0000-0000-0026-010000000000/value
+2024-07-04T11:09:55.408Z INFO webdriver: DATA { text: 'Descrição da nota a ser apagada' }
+2024-07-04T11:09:56.536Z INFO webdriver: RESULT null
+2024-07-04T11:09:56.537Z INFO webdriver: COMMAND findElement("accessibility id", "save-note-button")
+2024-07-04T11:09:56.537Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:56.537Z INFO webdriver: DATA { using: 'accessibility id', value: 'save-note-button' }
+2024-07-04T11:09:56.612Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '36000000-0000-0000-0026-010000000000',
+  ELEMENT: '36000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:56.614Z INFO webdriver: COMMAND elementClick("36000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:56.614Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/36000000-0000-0000-0026-010000000000/click
+2024-07-04T11:09:57.419Z INFO webdriver: RESULT null
+2024-07-04T11:09:57.420Z INFO webdriver: COMMAND isElementDisplayed("1A000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:57.420Z INFO webdriver: [GET] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/1A000000-0000-0000-0026-010000000000/displayed
+2024-07-04T11:09:57.470Z INFO webdriver: RESULT true
+2024-07-04T11:09:57.470Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser apagada"]")
+2024-07-04T11:09:57.471Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:57.471Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser apagada"]' }
+2024-07-04T11:09:57.594Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'D2000000-0000-0000-0026-010000000000',
+  ELEMENT: 'D2000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:57.595Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Descrição da nota a ser apagada"]")
+2024-07-04T11:09:57.595Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:57.595Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//*[@label="Descrição da nota a ser apagada"]'
+}
+2024-07-04T11:09:57.723Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'D3000000-0000-0000-0026-010000000000',
+  ELEMENT: 'D3000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:57.725Z INFO webdriver: COMMAND isElementDisplayed("D2000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:57.725Z INFO webdriver: [GET] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/D2000000-0000-0000-0026-010000000000/displayed
+2024-07-04T11:09:57.748Z INFO webdriver: RESULT true
+2024-07-04T11:09:57.748Z INFO webdriver: COMMAND isElementDisplayed("D3000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:57.748Z INFO webdriver: [GET] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/D3000000-0000-0000-0026-010000000000/displayed
+2024-07-04T11:09:57.768Z INFO webdriver: RESULT true
+2024-07-04T11:09:57.768Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser apagada"]")
+2024-07-04T11:09:57.768Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:57.768Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser apagada"]' }
+2024-07-04T11:09:57.888Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'D2000000-0000-0000-0026-010000000000',
+  ELEMENT: 'D2000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:57.889Z INFO webdriver: COMMAND elementClick("D2000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:57.889Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/D2000000-0000-0000-0026-010000000000/click
+2024-07-04T11:09:58.565Z INFO webdriver: RESULT null
+2024-07-04T11:09:58.565Z INFO webdriver: COMMAND findElement("accessibility id", "delete-note-button")
+2024-07-04T11:09:58.565Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:58.565Z INFO webdriver: DATA { using: 'accessibility id', value: 'delete-note-button' }
+2024-07-04T11:09:58.630Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'D5000000-0000-0000-0026-010000000000',
+  ELEMENT: 'D5000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:58.632Z INFO webdriver: COMMAND elementClick("D5000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:58.632Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/D5000000-0000-0000-0026-010000000000/click
+2024-07-04T11:09:59.317Z INFO webdriver: RESULT null
+2024-07-04T11:09:59.317Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Apagar"]")
+2024-07-04T11:09:59.317Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:09:59.317Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Apagar"]' }
+2024-07-04T11:09:59.479Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'EE000000-0000-0000-0026-010000000000',
+  ELEMENT: 'EE000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:09:59.480Z INFO webdriver: COMMAND elementClick("EE000000-0000-0000-0026-010000000000")
+2024-07-04T11:09:59.480Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/EE000000-0000-0000-0026-010000000000/click
+2024-07-04T11:10:00.155Z INFO webdriver: RESULT null
+2024-07-04T11:10:00.155Z INFO webdriver: COMMAND findElement("accessibility id", "new-note-button")
+2024-07-04T11:10:00.155Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:10:00.155Z INFO webdriver: DATA { using: 'accessibility id', value: 'new-note-button' }
+2024-07-04T11:10:00.202Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-0026-010000000000',
+  ELEMENT: '1A000000-0000-0000-0026-010000000000'
+}
+2024-07-04T11:10:00.204Z INFO webdriver: COMMAND isElementDisplayed("1A000000-0000-0000-0026-010000000000")
+2024-07-04T11:10:00.204Z INFO webdriver: [GET] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element/1A000000-0000-0000-0026-010000000000/displayed
+2024-07-04T11:10:00.232Z INFO webdriver: RESULT true
+2024-07-04T11:10:00.232Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser apagada"]")
+2024-07-04T11:10:00.233Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:10:00.233Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser apagada"]' }
+2024-07-04T11:10:00.352Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+2024-07-04T11:10:00.353Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser apagada"]")
+2024-07-04T11:10:00.353Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/element
+2024-07-04T11:10:00.353Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser apagada"]' }
+2024-07-04T11:10:00.442Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+    ✔ Should delete a note (7338ms)
+2024-07-04T11:10:00.444Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:10:00.444Z INFO webdriver: [POST] http://127.0.0.1:4723/session/ff0d1544-07b2-422b-82b4-a925c48eb978/appium/device/terminate_app
+2024-07-04T11:10:00.444Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:10:01.493Z INFO webdriver: RESULT true
+
+  Edit note
+2024-07-04T11:10:01.495Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:10:01.495Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:10:01.496Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:10:01.496Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:10:05.080Z INFO webdriver: COMMAND findElement("accessibility id", "new-note-button")
+2024-07-04T11:10:05.081Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:05.081Z INFO webdriver: DATA { using: 'accessibility id', value: 'new-note-button' }
+2024-07-04T11:10:05.191Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-A726-010000000000',
+  ELEMENT: '1A000000-0000-0000-A726-010000000000'
+}
+2024-07-04T11:10:05.193Z INFO webdriver: COMMAND elementClick("1A000000-0000-0000-A726-010000000000")
+2024-07-04T11:10:05.193Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/1A000000-0000-0000-A726-010000000000/click
+2024-07-04T11:10:05.907Z INFO webdriver: RESULT null
+2024-07-04T11:10:05.908Z INFO webdriver: COMMAND findElement("accessibility id", "title-input")
+2024-07-04T11:10:05.908Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:05.908Z INFO webdriver: DATA { using: 'accessibility id', value: 'title-input' }
+2024-07-04T11:10:05.957Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '32000000-0000-0000-A726-010000000000',
+  ELEMENT: '32000000-0000-0000-A726-010000000000'
+}
+2024-07-04T11:10:05.958Z INFO webdriver: COMMAND elementClear("32000000-0000-0000-A726-010000000000")
+2024-07-04T11:10:05.958Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/32000000-0000-0000-A726-010000000000/clear
+2024-07-04T11:10:06.733Z INFO webdriver: RESULT null
+2024-07-04T11:10:06.733Z INFO webdriver: COMMAND elementSendKeys("32000000-0000-0000-A726-010000000000", "Nota a ser editada")
+2024-07-04T11:10:06.733Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/32000000-0000-0000-A726-010000000000/value
+2024-07-04T11:10:06.733Z INFO webdriver: DATA { text: 'Nota a ser editada' }
+2024-07-04T11:10:07.290Z INFO webdriver: RESULT null
+2024-07-04T11:10:07.290Z INFO webdriver: COMMAND findElement("accessibility id", "description-input")
+2024-07-04T11:10:07.291Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:07.291Z INFO webdriver: DATA { using: 'accessibility id', value: 'description-input' }
+2024-07-04T11:10:07.410Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '35000000-0000-0000-A726-010000000000',
+  ELEMENT: '35000000-0000-0000-A726-010000000000'
+}
+2024-07-04T11:10:07.413Z INFO webdriver: COMMAND elementClear("35000000-0000-0000-A726-010000000000")
+2024-07-04T11:10:07.414Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/35000000-0000-0000-A726-010000000000/clear
+2024-07-04T11:10:07.461Z INFO webdriver: RESULT null
+2024-07-04T11:10:07.461Z INFO webdriver: COMMAND elementSendKeys("35000000-0000-0000-A726-010000000000", "Descrição da nota a ser editada")
+2024-07-04T11:10:07.461Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/35000000-0000-0000-A726-010000000000/value
+2024-07-04T11:10:07.461Z INFO webdriver: DATA { text: 'Descrição da nota a ser editada' }
+2024-07-04T11:10:08.615Z INFO webdriver: RESULT null
+2024-07-04T11:10:08.615Z INFO webdriver: COMMAND findElement("accessibility id", "save-note-button")
+2024-07-04T11:10:08.615Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:08.615Z INFO webdriver: DATA { using: 'accessibility id', value: 'save-note-button' }
+2024-07-04T11:10:08.690Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '36000000-0000-0000-A726-010000000000',
+  ELEMENT: '36000000-0000-0000-A726-010000000000'
+}
+2024-07-04T11:10:08.691Z INFO webdriver: COMMAND elementClick("36000000-0000-0000-A726-010000000000")
+2024-07-04T11:10:08.691Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/36000000-0000-0000-A726-010000000000/click
+2024-07-04T11:10:09.494Z INFO webdriver: RESULT null
+2024-07-04T11:10:09.494Z INFO webdriver: COMMAND isElementDisplayed("1A000000-0000-0000-A726-010000000000")
+2024-07-04T11:10:09.494Z INFO webdriver: [GET] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element/1A000000-0000-0000-A726-010000000000/displayed
+2024-07-04T11:10:09.530Z INFO webdriver: RESULT true
+2024-07-04T11:10:09.530Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser editada"]")
+2024-07-04T11:10:09.530Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:09.530Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser editada"]' }
+2024-07-04T11:10:09.680Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+2024-07-04T11:10:09.682Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Descrição da nota a ser editada"]")
+2024-07-04T11:10:09.682Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:09.682Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//*[@label="Descrição da nota a ser editada"]'
+}
+2024-07-04T11:10:09.811Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'D3000000-0000-0000-A726-010000000000',
+  ELEMENT: 'D3000000-0000-0000-A726-010000000000'
+}
+2024-07-04T11:10:09.813Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser editada"]")
+2024-07-04T11:10:09.813Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/element
+2024-07-04T11:10:09.813Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser editada"]' }
+2024-07-04T11:10:09.922Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+    1) Should edit a note
+2024-07-04T11:10:09.939Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:10:09.939Z INFO webdriver: [POST] http://127.0.0.1:4723/session/5e3d7a3b-f220-4a26-9e39-4558030e4e32/appium/device/terminate_app
+2024-07-04T11:10:09.939Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:10:10.979Z INFO webdriver: RESULT true
+
+  Pin note
+2024-07-04T11:10:10.980Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-07-04T11:10:10.980Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-07-04T11:10:10.980Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-07-04T11:10:10.980Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:platformVersion': '17.2',
+      'appium:deviceName': 'iPhone 15',
+      'appium:automationName': 'XCUITest',
+      'appium:app': 'com.pgcapp',
+      'appium:locale': 'US',
+      'appium:language': 'en',
+      'appium:noReset': true
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'iOS',
+    'appium:platformVersion': '17.2',
+    'appium:deviceName': 'iPhone 15',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'com.pgcapp',
+    'appium:locale': 'US',
+    'appium:language': 'en',
+    'appium:noReset': true
+  }
+}
+2024-07-04T11:10:15.549Z INFO webdriver: COMMAND findElement("accessibility id", "new-note-button")
+2024-07-04T11:10:15.551Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:15.551Z INFO webdriver: DATA { using: 'accessibility id', value: 'new-note-button' }
+2024-07-04T11:10:15.746Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1A000000-0000-0000-4B27-010000000000',
+  ELEMENT: '1A000000-0000-0000-4B27-010000000000'
+}
+2024-07-04T11:10:15.749Z INFO webdriver: COMMAND elementClick("1A000000-0000-0000-4B27-010000000000")
+2024-07-04T11:10:15.749Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/1A000000-0000-0000-4B27-010000000000/click
+2024-07-04T11:10:16.482Z INFO webdriver: RESULT null
+2024-07-04T11:10:16.483Z INFO webdriver: COMMAND findElement("accessibility id", "title-input")
+2024-07-04T11:10:16.483Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:16.483Z INFO webdriver: DATA { using: 'accessibility id', value: 'title-input' }
+2024-07-04T11:10:16.555Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '36000000-0000-0000-4B27-010000000000',
+  ELEMENT: '36000000-0000-0000-4B27-010000000000'
+}
+2024-07-04T11:10:16.556Z INFO webdriver: COMMAND elementClear("36000000-0000-0000-4B27-010000000000")
+2024-07-04T11:10:16.556Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/36000000-0000-0000-4B27-010000000000/clear
+2024-07-04T11:10:17.363Z INFO webdriver: RESULT null
+2024-07-04T11:10:17.364Z INFO webdriver: COMMAND elementSendKeys("36000000-0000-0000-4B27-010000000000", "Nota a ser fixada")
+2024-07-04T11:10:17.364Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/36000000-0000-0000-4B27-010000000000/value
+2024-07-04T11:10:17.364Z INFO webdriver: DATA { text: 'Nota a ser fixada' }
+2024-07-04T11:10:17.911Z INFO webdriver: RESULT null
+2024-07-04T11:10:17.912Z INFO webdriver: COMMAND findElement("accessibility id", "description-input")
+2024-07-04T11:10:17.912Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:17.912Z INFO webdriver: DATA { using: 'accessibility id', value: 'description-input' }
+2024-07-04T11:10:18.003Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '39000000-0000-0000-4B27-010000000000',
+  ELEMENT: '39000000-0000-0000-4B27-010000000000'
+}
+2024-07-04T11:10:18.006Z INFO webdriver: COMMAND elementClear("39000000-0000-0000-4B27-010000000000")
+2024-07-04T11:10:18.006Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/39000000-0000-0000-4B27-010000000000/clear
+2024-07-04T11:10:18.053Z INFO webdriver: RESULT null
+2024-07-04T11:10:18.053Z INFO webdriver: COMMAND elementSendKeys("39000000-0000-0000-4B27-010000000000", "Descrição da nota a ser fixada")
+2024-07-04T11:10:18.054Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/39000000-0000-0000-4B27-010000000000/value
+2024-07-04T11:10:18.054Z INFO webdriver: DATA { text: 'Descrição da nota a ser fixada' }
+2024-07-04T11:10:19.197Z INFO webdriver: RESULT null
+2024-07-04T11:10:19.197Z INFO webdriver: COMMAND findElement("accessibility id", "save-note-button")
+2024-07-04T11:10:19.197Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:19.197Z INFO webdriver: DATA { using: 'accessibility id', value: 'save-note-button' }
+2024-07-04T11:10:19.298Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '3A000000-0000-0000-4B27-010000000000',
+  ELEMENT: '3A000000-0000-0000-4B27-010000000000'
+}
+2024-07-04T11:10:19.300Z INFO webdriver: COMMAND elementClick("3A000000-0000-0000-4B27-010000000000")
+2024-07-04T11:10:19.300Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/3A000000-0000-0000-4B27-010000000000/click
+2024-07-04T11:10:20.075Z INFO webdriver: RESULT null
+2024-07-04T11:10:20.077Z INFO webdriver: COMMAND isElementDisplayed("1A000000-0000-0000-4B27-010000000000")
+2024-07-04T11:10:20.078Z INFO webdriver: [GET] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element/1A000000-0000-0000-4B27-010000000000/displayed
+2024-07-04T11:10:20.156Z INFO webdriver: RESULT true
+2024-07-04T11:10:20.156Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser fixada"]")
+2024-07-04T11:10:20.157Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:20.157Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser fixada"]' }
+2024-07-04T11:10:20.486Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+2024-07-04T11:10:20.488Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Descrição da nota a ser fixada"]")
+2024-07-04T11:10:20.488Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:20.488Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//*[@label="Descrição da nota a ser fixada"]'
+}
+2024-07-04T11:10:20.677Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'D7000000-0000-0000-4B27-010000000000',
+  ELEMENT: 'D7000000-0000-0000-4B27-010000000000'
+}
+2024-07-04T11:10:20.682Z INFO webdriver: COMMAND findElement("xpath", "//*[@label="Nota a ser fixada"]")
+2024-07-04T11:10:20.682Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/element
+2024-07-04T11:10:20.682Z INFO webdriver: DATA { using: 'xpath', value: '//*[@label="Nota a ser fixada"]' }
+2024-07-04T11:10:20.801Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at XCUITestDriver.doNativeFind (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:143:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at XCUITestDriver.findNativeElementOrElements (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:97:12)\n' +
+    '    at XCUITestDriver.findElOrEls (/Users/rodrigo98rm/.appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:24:14)\n' +
+    '    at XCUITestDriver.findElOrElsWithProcessing (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:60:12)\n' +
+    '    at XCUITestDriver.findElement (/Users/rodrigo98rm/.nvm/versions/node/v20.10.0/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/commands/find.ts:75:12)'
+}
+    2) Should pin a note
+2024-07-04T11:10:20.807Z INFO webdriver: COMMAND terminateApp("com.pgcapp")
+2024-07-04T11:10:20.807Z INFO webdriver: [POST] http://127.0.0.1:4723/session/7afe0978-4f3b-4f8a-935c-1d03ab69b50d/appium/device/terminate_app
+2024-07-04T11:10:20.807Z INFO webdriver: DATA { appId: 'com.pgcapp' }
+2024-07-04T11:10:21.870Z INFO webdriver: RESULT true
+
+
+  6 passing (1m)
+  2 failing
+
+  1) Edit note
+       Should edit a note:
+
+      AssertionError [ERR_ASSERTION]: false == true
+      + expected - actual
+
+      -false
+      +true
+      
+      at /Users/rodrigo98rm/Documents/dev/pgc/appium-tests/src/test/baseFlows/createNote.base.ts:30:10
+      at Generator.next (<anonymous>)
+      at fulfilled (src/test/baseFlows/createNote.base.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+  2) Pin note
+       Should pin a note:
+
+      AssertionError [ERR_ASSERTION]: false == true
+      + expected - actual
+
+      -false
+      +true
+      
+      at /Users/rodrigo98rm/Documents/dev/pgc/appium-tests/src/test/baseFlows/createNote.base.ts:30:10
+      at Generator.next (<anonymous>)
+      at fulfilled (src/test/baseFlows/createNote.base.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+
+
+rodrigo98rm in appium-tests on  main [!?] took 1m 16.8s
+➜  

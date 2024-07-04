@@ -51,7 +51,6 @@ class App {
     }
 
     this.driver = await remote(appiumOptions);
-    // TODO: Relaunch app on the beginning of each test
   }
 
   async quit() {
@@ -61,6 +60,7 @@ class App {
 
     // await this.driver.pause(1000);
     // await this.driver.deleteSession();
+    // https://discuss.appium.io/t/want-to-restart-android-application-in-a-single-appium-session-without-deleting-uninstalling-it/13561/12
     await this.driver.terminateApp('com.pgcapp');
   }
 
