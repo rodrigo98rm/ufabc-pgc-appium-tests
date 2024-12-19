@@ -14,7 +14,7 @@ describe('Edit note', function () {
     await app.quit();
   });
 
-  it('Should edit a note', async () => {
+  it('7 - Should edit a note', async () => {
     const noteTitle = 'Nota a ser editada';
     const noteDescription = 'Descrição da nota a ser editada';
 

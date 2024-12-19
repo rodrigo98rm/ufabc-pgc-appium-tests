@@ -13,7 +13,7 @@ describe('Empty list state', function () {
     await app.quit();
   });
 
-  it('Should show some basic information while the list is empty', async () => {
+  it('3 - Should show some basic information while the list is empty', async () => {
     const emptyStateTitle = await app.findElementByText(
       'Nenhuma nota cadastrada'
     );

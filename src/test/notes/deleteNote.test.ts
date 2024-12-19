@@ -14,7 +14,7 @@ describe('Delete note', function () {
     await app.quit();
   });
 
-  it('Should delete a note', async () => {
+  it('6 - Should delete a note', async () => {
     const noteTitle = 'Nota a ser apagada';
     const noteDescription = 'Descrição da nota a ser apagada';
 

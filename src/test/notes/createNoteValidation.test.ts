@@ -13,7 +13,7 @@ describe('Create note validation', function () {
     await app.quit();
   });
 
-  it('Should display the correct validation errors', async () => {
+  it('4 - Should display the correct validation errors', async () => {
     const newNoteButton = await app.findElementById('new-note-button');
     await newNoteButton.click();
 

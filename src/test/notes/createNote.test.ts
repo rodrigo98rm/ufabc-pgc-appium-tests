@@ -13,7 +13,7 @@ describe('Create note', function () {
     await app.quit();
   });
 
-  it('Should create a note', async () => {
+  it('5 - Should create a note', async () => {
     await createNote({
       app,
       noteTitle: 'Nota teste 1',

@@ -16,7 +16,7 @@ describe('Login fail', function () {
     await app.quit();
   });
 
-  it('Login fails', async () => {
+  it('1 - Login fails', async () => {
     const emailInput = await app.findElementById('email-input');
     await emailInput.setValue('rodrigo@teste.com');
 

@@ -13,7 +13,7 @@ describe('Login success', function () {
     await app.quit();
   });
 
-  it('Login succeeds', async () => {
+  it('2 - Login succeeds', async () => {
     const emailInput = await app.findElementById('email-input');
     await emailInput.setValue('rodrigo@teste.com');
 

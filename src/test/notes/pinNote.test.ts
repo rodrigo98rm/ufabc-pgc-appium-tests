@@ -14,7 +14,7 @@ describe('Pin note', function () {
     await app.quit();
   });
 
-  it('Should pin a note', async () => {
+  it('8 - Should pin a note', async () => {
     const noteTitle = 'Nota a ser fixada';
     const noteDescription = 'Descrição da nota a ser fixada';
 
