@@ -35,6 +35,7 @@ const iosCapabilities = {
   'appium:locale': 'US',
   'appium:language': 'en',
   'appium:noReset': true,
+  //'appium:maxTypingFrequency': 20,
 };
 
 class App {

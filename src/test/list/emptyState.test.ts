@@ -17,6 +17,7 @@ describe('Empty list state', function () {
     const emptyStateTitle = await app.findElementByText(
       'Nenhuma nota cadastrada'
     );
+    // await app.driver?.pause(2000);
     assert.equal(await emptyStateTitle.isDisplayed(), true);
   });
 });
